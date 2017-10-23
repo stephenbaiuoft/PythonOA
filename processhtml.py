@@ -1,7 +1,8 @@
+#!/user/bin/python
 import re;
 
 
-def process_line(input, r_dic):
+def process(input, r_dic):
     #prog = re.compile(pattern)
     for rc_pattern, cm_pattern in r_dic.items():
         # updating input through all regex expressions
@@ -71,3 +72,7 @@ def init_regex():
              }
 
     return r_dic
+
+
+if __name__ == '__main__':
+    pass

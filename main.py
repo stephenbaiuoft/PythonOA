@@ -1,21 +1,20 @@
+#!/user/bin/python
 import sys
 import processhtml as ph
 
 def main():
-    # input_file = ""
-    # output_file = ""
-    # while len(input_file) == 0 or len(output_file) == 0:
-    #     if len(input_file) == 0:
-    #         input_file = input("please enter input filename: ")
-    #     if len(output_file) == 0:
-    #         output_file = input("please enter output filename: ")
+    input_file = ""
+    output_file = "output.html"
+    while len(input_file) == 0 :
+        input_file = input("please enter input filename: ") + ".html"
 
-    input_file = "test.html"
-    output_file = "o1.txt"
-    input_file1 = "t2.html"
-    output_file2 = "o2.txt"
+
+    # input_file = "test.html"
+    # output_file = "o1.txt"
+    # input_file1 = "t2.html"
+    # output_file2 = "o2.txt"
     process_file(input_file, output_file)
-    process_file(input_file1, output_file2)
+    # process_file(input_file1, output_file2)
 
     pass
 
@@ -29,7 +28,7 @@ def process_file(input_file, output_file):
             # read the entire file
             ftxt = fin.read()
             #print(ftxt)
-            foutput = ph.process_line(ftxt, r_dic)
+            foutput = ph.process(ftxt, r_dic)
 
             print("\noutput is:\n" + foutput)
             fout.writelines(ftxt)
