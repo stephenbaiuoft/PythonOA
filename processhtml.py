@@ -43,7 +43,7 @@ def init_regex():
 
     # replacing of closing tag
     cm_chtml = r'\1\\color[RED]\2'
-    cm_chead = r'\1color[YELLOW]\2'
+    cm_chead = r'\1\\color[YELLOW]\2'
     cm_ctitle = r'\1\\color[GREEN]\2'
     cm_cbody = r'\1\\color[TURQUOISE]\2'
     cm_ch = r'\1\\color[DARKGREEN]\2'

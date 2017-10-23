@@ -12,8 +12,10 @@ def main():
 
     input_file = "test.html"
     output_file = "o1.txt"
+    input_file1 = "t2.html"
+    output_file2 = "o2.txt"
     process_file(input_file, output_file)
-
+    process_file(input_file1, output_file2)
 
     pass
 
