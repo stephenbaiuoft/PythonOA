@@ -2,14 +2,16 @@ import sys
 import processhtml as ph
 
 def main():
-    input_file = ""
-    output_file = ""
-    while len(input_file) == 0 or len(output_file) == 0:
-        if len(input_file) == 0:
-            input_file = input("please enter input filename: ")
-        if len(output_file) == 0:
-            output_file = input("please enter output filename: ")
+    # input_file = ""
+    # output_file = ""
+    # while len(input_file) == 0 or len(output_file) == 0:
+    #     if len(input_file) == 0:
+    #         input_file = input("please enter input filename: ")
+    #     if len(output_file) == 0:
+    #         output_file = input("please enter output filename: ")
 
+    input_file = "test.html"
+    output_file = "o1.txt"
     process_file(input_file, output_file)
 
 
@@ -22,11 +24,17 @@ def process_file(input_file, output_file):
         fin = open(input_file, 'rt')
         fout = open(output_file, 'wt')
         try:
-            for line in fin:
-                line = ph.process_line(line, r_dic)
-                fout.writelines(line)
-                print (line)
-        except:
+            # read the entire file
+            ftxt = fin.read()
+            #print(ftxt)
+            foutput = ph.process_line(ftxt, r_dic)
+
+            print("\noutput is:\n" + foutput)
+            fout.writelines(ftxt)
+
+
+        except IOError:
+            print(IOError)
             print("error with ph processing")
 
     except IOError:

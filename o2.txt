@@ -1,0 +1,6 @@
+\color[RED]<HTML>
+\color[YELLOW]<HEAD>\color[GREEN]<TITLE>Welcome to Capital One highlighter test\color[GREEN]</TITLE>\color[YELLOW]</HEAD> \color[TURQUOISE]<BODY>
+\color[DARKGREEN]<H1>Welcome to Capital One\color[DARKGREEN]</H1>
+\color[DARKGRAY]<P><A HREF="http://tech.capitalone.ca">Visit Our Blog\color[BLUE]</A>\color[DARKGRAY]</P> \color[TURQUOISE]</BODY>
+\color[RED]</HTML>
+
